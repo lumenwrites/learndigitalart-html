@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" as="font" crossorigin="anonymous" href="/static/fonts/OpenSans-Regular.ttf">
+  <link rel="preload" as="font" crossorigin="anonymous" href="/static/fonts/OpenSans-Bold.ttf">
+  <link rel="preload" as="font" crossorigin="anonymous" href="/static/fonts/OpenSans-Light.ttf">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="/static/fontawesome/all.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/static/img/favicon.ico">
+
+  <title>Startup Lab</title>
+  <meta name="description" content="Web Design and Development">
+  <meta name="author" content="Lumen">
+  <meta property="og:title" content="Web Design and Development">
+  <meta property="og:description" content="Web Design and Development">
+  <meta property="og:image" content="https://lumenwrites.dev/static/img/social-image.png">
+  <meta property="og:url" content="https://lumenwrites.dev">
+  <meta name="twitter:title" content="Lumen">
+  <meta name="twitter:description" content="Web Design and Development">
+  <meta name="twitter:image" content="https://lumenwrites.dev/static/img/social-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a class="logo" href="/">
+        <img src="/static/img/logo.png"/>
+        Learn Digital Art
+      </a>
+    </div>
+  </header>
+  <div class="cta">
+
+    <h1>Your starter pack is in the mail!</h1>
+    <div class="tagline">
+      Meanwhile - make sure you have subscribed to our YouTube and Instagram!
+    </div>
+
+
+
+  <div class="skills">
+    <!--  Web Entrepreneurs -->
+    <div class="wrapper">
+      <a href="https://www.youtube.com/channel/UC0d7swrV0DggjroNftDJFPg" class="skill">
+        <i class="fab fa-youtube"></i>
+        <h2>YouTube Tutorials</h2>
+        <!-- Watch free youtube tutorials. -->
+      </a>
+      <a href="https://discord.gg/k5yaWKKY8A" class="skill">
+        <i class="fab fa-discord" style="font-size: 57px;"></i>
+        <h2>Discord Community</h2>
+        <!-- Join our discord community - a group of digital art students helping each other to get better,  -->
+        <!-- sharing feedback and advice. -->
+      </a>
+      <a href="https://www.instagram.com/learndigitalart/" class="skill">
+        <i class="fab fa-instagram"></i>
+        <h2>Instagram</h2>
+        <!-- Follow us on Instagram. -->
+      </div>
+    </div>
+  </div>
+
+  <div class="about-bg">
+    <div class="about">
+      <div class="wrapper">
+        <h2>About</h2>
+        <p> We help founders with prototyping ideas, developing an MVP, and growing existing projects.</p>
+        <!-- <p> Our goal is to help aspiring startup founders to turn their ideas into reality. </p>
+        <p> We will help you to create a prototype of your project idea and develop and MVP.</p> -->
+        <!-- <p> We can also help you to improve and grow your existing project. </p> -->
+        <!-- <p> Your project will be built using the powerful and modern tech stack - React, Graphql,
+        </p> -->
+        <p>If you have an idea, and need help turning it into reality - send us a message. </p>
+        <button class="btn-cta" data-micromodal-trigger="modal">
+          Let's talk about your project!
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<div id="modal" role="dialog" aria-hidden="true">
+  <div class="overlay" data-micromodal-close>
+    <div class="modal-body" role="dialog">
+      <h2 id="contact"> Contact </h2>
+      <p>Send us a message, and get a free consultation.</p>
+
+      <form class="form-horizontal" action="https://formspree.io/mike@startuplab.io" method="POST">
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Your Email">
+          <input type="text" class="form-control" name="_subject" placeholder="Subject">
+          <input type="hidden" name="_next" value="https://startuplab.io" />
+          <textarea class="form-control" name="message"
+            placeholder="A couple of words about your project..."></textarea>
+          <div class="contact">
+            Or send an email to:<br>
+            mike@startuplab.io
+          </div>
+          <button type="submit" class="btn-submit">
+            Send
+          </button>
+          <div class="clearfix"></div>
+      </form>
+    </div>
+  </div>
+</div> <!-- End #modal -->
+
+<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<script onload="MicroModal.init();" src="/static/js/micromodal.min.js" defer></script>
+<script>
+  const tx = document.getElementsByTagName('textarea');
+  for (let i = 0; i < tx.length; i++) {
+    tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+    tx[i].addEventListener("input", OnInput, false);
+  }
+
+  function OnInput() {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  }
+</script>
+
+</html>

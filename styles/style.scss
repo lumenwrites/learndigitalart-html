@@ -1,0 +1,22 @@
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./_general.scss";
+@import "./_header.scss";
+@import "./_projects.scss";
+@import "./_modal.scss";
+
+
+.about-bg {
+  background: white url(/static/img/macbook.png) no-repeat center;
+  background-size: cover;
+}
+
+.about {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px;
+
+  text-align: center;
+}
+

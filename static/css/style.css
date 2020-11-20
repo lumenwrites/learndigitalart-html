@@ -1,0 +1,463 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input {
+  font-size: 1em;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-display: swap;
+}
+body,
+html {
+  font-family: "Open Sans";
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  margin-top: 1em;
+}
+
+b {
+  font-weight: 400;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 10px;
+  border-top: 2px solid #f66303;
+}
+header .logo {
+  display: block;
+  margin: auto;
+  width: 208px;
+  text-align: center;
+  font-size: 22px;
+  color: #3d454b;
+}
+header .logo img {
+  width: 32px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+.cta {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(0deg, #1c1c1c 0%, #3f3f3f 100%);
+  background: #1e2329;
+  background: white url(/static/img/bg-no-frame.png) no-repeat center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+.cta::after {
+  content: "";
+  background: url(/static/img/dark-grid.png) no-repeat center;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.cta .logo {
+  margin: auto;
+  width: 180px;
+  border-radius: 50%;
+}
+.cta h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 31px;
+  font-weight: 100;
+}
+.cta h1 .second-line {
+  font-size: 30px;
+}
+.cta .tagline {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.image-wrapper {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.video {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+form input {
+  text-align: center;
+}
+
+.btn-cta {
+  background: linear-gradient(to bottom, #ff6500, #f84200);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+.skills {
+  color: #f66303;
+  background: #1e2329;
+  background: white url(/static/img/bg-no-frame.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+}
+.skills h2 {
+  font-size: 1.2em;
+}
+.skills .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills .wrapper .skill {
+  text-align: center;
+  flex-basis: calc(100% / 3);
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+@media (max-width: 420px) {
+  .skills .wrapper .skill {
+    flex-basis: calc(100%);
+  }
+}
+.skills .wrapper .skill h2 {
+  font-size: 2em;
+}
+.skills .wrapper .skill i {
+  font-size: 64px;
+  color: white;
+  background: #f66303;
+  background: #f94701;
+  background: linear-gradient(to bottom, #ff6500, #f84200);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.projects {
+  background: #faf4e9;
+  padding-top: 20px;
+}
+.projects h2 {
+  color: #f66303;
+}
+
+.projects .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.project {
+  position: relative;
+  flex-basis: calc(33.333% - 10px);
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: white;
+  color: black;
+  border: 1px solid rgba(98, 24, 24, 0.2);
+  box-shadow: 0 1px 4px rgba(98, 24, 24, 0.2);
+  position: relative;
+}
+@media (max-width: 820px) {
+  .project {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media (max-width: 640px) {
+  .project {
+    flex-basis: calc(100%);
+  }
+}
+.project h2 {
+  color: #3d454b;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.project .description {
+  padding: 15px;
+}
+.project .description p:first-of-type {
+  margin-top: 0;
+}
+.project .footer {
+  display: none;
+  padding: 4px 15px 6px 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #fcfcfc;
+  border-top: 1px solid #e8e8e8;
+}
+.project .footer .tags {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.project .footer .fab,
+.project .footer .fas {
+  float: right;
+  margin: 4px;
+}
+.project .footer .tag {
+  background-color: #e7e7e7;
+  font-weight: 100;
+  font-size: 0.8em;
+  padding: 1px 4px;
+}
+
+/* Css magic that keeps images 16x9, background in the center. */
+.image-wrapper {
+  width: 100%;
+  position: relative;
+}
+.image-wrapper:after {
+  padding-top: 56.25%;
+  /* 16:9 ratio */
+  display: block;
+  content: "";
+}
+.image-wrapper .thumbnail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  margin: 0;
+  border: none;
+  background-color: #1f364d !important;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#modal .modal-body {
+  margin: 20px auto;
+  padding: 20px 40px;
+  max-width: 95%;
+  width: 520px;
+  background: white;
+  max-height: 80%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#modal .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#modal.is-open {
+  display: block;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 5px;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  resize: none;
+  margin-top: 10px;
+  padding: 10px 5px;
+  font-family: "Open Sans";
+  font-size: 1em;
+  min-height: 200px;
+}
+
+.btn-submit {
+  background: #ff6500;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 5px;
+  float: right;
+}
+
+.contact {
+  font-size: 0.8em;
+  float: left;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about-bg {
+  background: white url(/static/img/macbook.png) no-repeat center;
+  background-size: cover;
+}
+
+.about {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

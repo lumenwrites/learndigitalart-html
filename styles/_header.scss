@@ -1,0 +1,152 @@
+header {
+  padding: 10px;
+  border-top: 2px solid #f66303;
+
+  .logo {
+    display: block;
+    margin: auto;
+    width: 208px;
+    text-align: center;
+
+    img {
+      width: 32px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 10px;
+    }
+
+    font-size: 22px;
+    color: #3d454b;
+  }
+
+}
+
+.cta {
+  text-align: center;
+  padding: 40px;
+  //background: rgb(28,28,28);
+  background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(63,63,63,1) 100%);
+  // background: white url(/static/img/procreate-bg.jpg) no-repeat center;
+  background: #1e2329;
+  background: white url(/static/img/bg-no-frame.png) no-repeat center;
+  background-size: cover;
+  color: white;
+
+  position: relative;
+  &::after {
+    content: "";
+    background: url(/static/img/dark-grid.png) no-repeat center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+  .logo {
+    margin: auto;
+    width: 180px;
+    border-radius: 50%;
+  }
+  h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 31px;
+    font-weight: 100;
+    .second-line {
+      font-size: 30px;
+    }
+  }
+  .tagline {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+.image-wrapper {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+.video {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10px;
+  input {
+    text-align: center;
+  }
+}
+
+.btn-cta {
+  background: linear-gradient(to bottom, #ff6500, #f84200);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+.skills {
+  color: #f66303;
+
+  background: #1e2329;
+  background: white url(/static/img/bg-no-frame.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+  h2 {
+    font-size: 1.2em;
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .skill {
+      text-align: center;
+      flex-basis: calc(100% / 3);
+      margin-top: 20px;
+
+      @media (max-width: 420px) {
+        flex-basis: calc(100%);
+      }
+      font-size: 0.8em;
+      h2 {
+        font-size: 2em;
+      }
+      i {
+        font-size: 64px;
+        color: white;
+        background: #f66303;
+        background: #f94701;
+        background: linear-gradient(to bottom, #ff6500, #f84200);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+    }
+  }
+}
+
